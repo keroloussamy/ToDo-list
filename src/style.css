@@ -1,3 +1,40 @@
 body {
-    background-color: bisque;
+  background-color: gainsboro;
+}
+
+#todo-list {
+  list-style: none;
+  background-color: white;
+  width: 500px;
+  margin: auto;
+  padding: 0;
+  margin-top: 100px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+}
+
+#todo-list li {
+  border-bottom: 1px solid rgb(255, 255, 255);
+  display: flex;
+  padding: 10px 15px 10px 10px;
+  color: rgb(92, 89, 89);
+}
+
+#todo-list li i {
+  margin-left: auto;
+}
+
+.add-item input {
+  border: 0;
+}
+
+input:focus {
+  outline: none !important;
+}
+
+.btn a {
+  text-align: center;
+  color: rgb(179, 174, 174);
+  text-decoration: none;
+  width: 100%;
+  padding: 10px 0;
 }
