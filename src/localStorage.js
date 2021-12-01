@@ -1,11 +1,9 @@
-export function setSortingIndex(todoList) {
-  return todoList.map((item, index) => { item.index = index; return item; });
-}
+export const setSortingIndex = (todoList) => todoList.map((item, index) => {
+  item.index = index; return item;
+});
 
-export function storeList(todoList) {
+export const storeList = (todoList) => {
   localStorage.setItem('todo-list', JSON.stringify(todoList));
-}
+};
 
-export function getList() {
-  return JSON.parse(localStorage.getItem('todo-list'));
-}
+export const getList = () => JSON.parse(localStorage.getItem('todo-list'));

@@ -1,6 +1,6 @@
 import { getList, storeList } from './localStorage.js';
 
-export default function completed(e) {
+export default (e) => {
   const list = getList();
   if (e.target.checked === true) {
     list[e.target.id].completed = true;
@@ -8,4 +8,4 @@ export default function completed(e) {
     list[e.target.id].completed = false;
   }
   storeList(list);
-}
+};
