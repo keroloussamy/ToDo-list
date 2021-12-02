@@ -25,6 +25,7 @@ body {
 
 .add-item input {
   border: 0;
+  width: 100%;
 }
 
 input:focus {
@@ -37,4 +38,14 @@ input:focus {
   text-decoration: none;
   width: 100%;
   padding: 10px 0;
+}
+
+.description {
+  width: 100%;
+  background-color: white;
+  border: 0;
+}
+
+.display-none {
+  display: none;
 }
