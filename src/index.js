@@ -46,8 +46,9 @@ input.addEventListener('keyup', (event) => {
   if (event.keyCode === 13) {
     LSOperations.add(event);
     event.target.value = '';
-    const list = LSOperations.getList();
-    manipulateHtml.addListItem(list[list.length - 1]);
+    const oldList = document.querySelectorAll('.todoItem');
+    [...oldList].forEach((e) => e.remove());
+    renderUI();
   }
 });
 
