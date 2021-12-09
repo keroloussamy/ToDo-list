@@ -38,4 +38,10 @@ const editing = (event) => {
   return list[index].description;
 };
 
-module.exports = { add, remove, displayList, renderUI, editing };
+const completed = (event) => {
+  let index = event.target.index;
+  list[index].completed = event.target.completed;
+  return list[index].completed;
+};
+
+module.exports = { add, remove, displayList, renderUI, editing, completed };

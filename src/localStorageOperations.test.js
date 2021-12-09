@@ -55,3 +55,19 @@ describe('Editing Method', () => {
     expect(input.value).toBe('New Task 2');
   });
 });
+
+describe('Complete Method', () => {
+  test('Complete item from the list', () => {
+    expect(MockLSOperations.completed({ target: { index: '0', completed: true } })).toBeTruthy();
+  });
+
+  test('Complete one item from the list', () => {
+    html()
+
+    MockLSOperations.displayList();
+    MockLSOperations.completed({ target: { index: '0', completed: true } })
+    MockLSOperations.renderUI();
+    const input = document.querySelector('.checkbox');
+    expect(input.checked).toBeTruthy();
+  });
+});
