@@ -9,6 +9,9 @@ const add = (event) => {
 const list = [{ description: 'task one', completed: false, index: 0 },
   { description: 'task one', completed: false, index: 1 },
   { description: 'task one', completed: false, index: 2 },
+  { description: 'task one', completed: false, index: 3 },
+  { description: 'task one', completed: false, index: 4 },
+  { description: 'task one', completed: false, index: 5 }
 ];
 
 const displayList = () => {
@@ -29,4 +32,10 @@ const remove = (event) => {
   return list.length;
 };
 
-module.exports = { add, remove, displayList };
+const editing = (event) => {
+  let index = event.target.index;
+  list[index].description = event.target.value;
+  return list[index].description;
+};
+
+module.exports = { add, remove, displayList, renderUI, editing };
